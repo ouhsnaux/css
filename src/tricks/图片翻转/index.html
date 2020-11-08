@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>图片翻转</title>
+    <style>
+      .outside1 {
+        padding: 100px 100px;
+        border: 1px solid red;
+        perspective: 600px;
+      }
+      .outside2 {
+        padding: 100px 100px;
+        border: 1px solid red;
+        /* perspective: 60px; */
+      }
+
+      .container {
+        position: relative;
+
+        width: 200px;
+        height: 200px;
+        border: 1px solid #ddd;
+
+        cursor: pointer;
+
+        transition: transform 5s ease-in-out;
+        transform-style: preserve-3d;
+      }
+
+      .face {
+        position: absolute;
+        
+        width: 100%;
+        height: 100%;
+
+        transition: transform .32s ease-in-out;
+        backface-visibility: hidden;
+      }
+
+      .face-front {
+        /* background: url('./face.png'); */
+        /* background-size: cover; */
+      }
+
+      .face-back {
+        background-color: green;
+        transform: rotateY(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outside1">
+      <div class="container" id="container1">
+        <img src="./face.png" class="face face-front"></img>
+        <div class="face face-back"></div>
+      </div>
+    </div>
+    <div class="outside2">
+      <div class="container" id="container2">
+        <img src="./face.png" class="face face-front"></img>
+        <div class="face face-back"></div>
+      </div>
+    </div>
+    <script>
+      window.onload = function() {
+        let container1 = document.querySelector('#container1');
+        let container2 = document.querySelector('#container2');
+        
+        // 点击停止动画
+        const onClick = (e) => {
+          console.log('click')
+          const { currentTarget: target } = e;
+          target.style.transform = 'rotateY(0deg)';
+          target.style.transition = 'transform 0s';
+          target.removeEventListener('click', onClick);
+        }
+
+        // 初始动画
+        container1.style.transform = 'rotateY(360deg)';
+        container2.style.transform = 'rotateY(360deg)';
+
+        container1.addEventListener('click', onClick, false);
+      }
+    </script>
+  </body>
+</html>
