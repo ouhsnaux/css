@@ -1,3 +1,3 @@
-# css-tricks
+# css
 
-css tricks
+css
