@@ -24,7 +24,7 @@
 
 ## 组成部分
 
-* `content`，设置宽高
+* `content`，设置宽高，最小最大宽高
 * `padding`，内边距
 * `border`，边框
 * `margin`，外边距
@@ -53,9 +53,9 @@
 
 * `width` 宽度
 * `style` 样式
-  * solid
-  * dotted
-  * dashed
+  * `solid`
+  * `dotted`
+  * `dashed`
 * `color` 颜色
 
 边框圆角 `border-radius`，根据值的个数，含义不同
@@ -93,3 +93,18 @@
 ## TODO BFC
 
 ## TODO IFC
+
+## 溢出
+
+盒子中内容过多就会发生溢出。
+
+设置 `overflow` 修改溢出处理策略，`overflow-x` 和 `overflow-y` 分别处理水平和垂直方向的溢出。
+
+* `visible` 可见，默认值，可能会与其它内容发生重叠
+* `hidden` 隐藏溢出内容
+* `scroll` 元素显示滚动条，可滚动查看溢出内容
+* `auto` 只在需要时添加滚动条
+
+当设置为 `scroll` 或者 `auto` 时会建立 `BFC`，盒子内外的布局互不影响。
+
+TODO aspect-ratio
