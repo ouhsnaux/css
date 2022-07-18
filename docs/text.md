@@ -31,47 +31,32 @@
 
 ## 布局
 
-### 方向
-
-`writing-mode` 书写方向
-
-* `horizontal-tb` 水平书写，从上往下排列
-* `vertical-rl` 垂直书写，从右往左排列
-* `vertical-lr` 垂直书写，从左往右排列
-
-与书写方向对应的四个方位词
-
-* `inline` 对应文字书写方向
-  * `inline-start` 对应默认布局的 `left`
-  * `inline-end` 对应默认布局的 `right`
-  * `inline-size` 对应默认布局的宽度
-* `block` 对应文字排列方向
-  * `block-start` 对应默认布局的 `top`
-  * `block-end` 对应默认布局的 `bottom`
-  * `block-size` 对应默认布局的 `height`
-
-### 文字布局
-
 * `text-align` 水平对齐方式，`left, right, center, justify`
+* `text-align-last` 最后一行水平对齐方式
 * `line-height` 行高，除了尺寸，还可以使用无单位数字，最终的行高等于字体大小乘以该数字，`1.5~2`比较合适
 * `text-indent` 首行缩进
-* `text-overflow` 文字溢出
-  * `clip` 隐藏
-  * `ellipsis` 显示 `...`
-* `white-space` 空白符和换行符
-  * `normal` 空白符合并，自动换行
-  * `nowrap` 空白符合并，禁止换行
-  * `pre` 保留原有格式，不自动换行
-  * `pre-wrap` 保留原有格式，并自动换行
-  * `pre-line` 空白符合并，自动换行
-  * `break-spaces`
-* `word-break`
-* `direction`
-* `hyphens`
-* `line-break`
-* `text-align-last`
-* `text-orientation`
-* `overflow-wrap`
+
+### 方向
+
+* `writing-mode` 书写方向
+  * `horizontal-tb` 水平书写，从上往下排列
+  * `vertical-rl` 垂直书写，从右往左排列
+  * `vertical-lr` 垂直书写，从左往右排列
+
+  与书写方向对应的四个方位词
+
+  | 属性 | 对应属性 | 属性 | 对应属性 |
+  | :-- | :-- | :-- | :-- |
+  | inline-start | left | block-start | top |
+  | inline-end | right | block-end | bottom |
+  | inline-size | width | block-size | height |
+
+* `direction` 水平布局方向
+  * `ltr`
+  * `rtl`
+* `text-orientation` 垂直方式书写时，单词书写方式
+
+### 空白符处理
 
 `white-space` 取值
 
@@ -82,3 +67,43 @@
 | pre | ❌ | ❌ | ✅ |
 | pre-wrap | ❌ | ✅ | ✅ |
 | pre-line | ✅ | ✅ | ✅ |
+
+### 文字溢出
+
+* `text-overflow` 单行文字溢出
+  * `clip` 隐藏
+  * `ellipsis` 显示 `...`
+* `word-break` 文字截断
+  
+  | 属性 | 最后一个词超长 | 单词超过一行 |
+  | :-- | :-- | :-- |
+  | normal | 显示在下一行 | 溢出 |
+  | break-all | 截断显示在两行 | 截断显示在两行 |
+  | break-word | 显示在下一行 | 截断显示在两行 |
+  | keep-all | 显示在下一行 | 溢出 |
+
+  `keep-all` 在CJK语言中不允许换行，其他与 `normal` 相同
+
+* `overflow-wrap(word-wrap)` 单词过长溢出
+  * `normal`
+  * `anywhere`
+  * `break-word` 文字截断
+* `hyphens` 单词截断显示 `-` 连接
+  * `none`
+  * `manual`
+  * `auto`
+* `line-break` 处理带有标点的 `CJK` 的断句
+  * `auto`
+  * `anywhere`
+  * `normal`
+  * `loose`
+
+## 自定义字体
+
+```css
+@font-face {
+  font-family: 'zantrokeregular';
+  src: url('fonts/zantroke-webfont.woff2') format('woff2'),
+        url('fonts/zantroke-webfont.woff') format('woff');
+}
+```

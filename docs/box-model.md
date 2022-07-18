@@ -107,4 +107,7 @@
 
 当设置为 `scroll` 或者 `auto` 时会建立 `BFC`，盒子内外的布局互不影响。
 
-TODO aspect-ratio
+## 其他
+
+`aspect-ratio` 宽高比
+`outline`
