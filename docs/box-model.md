@@ -57,13 +57,12 @@
   * `dotted`
   * `dashed`
 * `color` 颜色
-
-边框圆角 `border-radius`，根据值的个数，含义不同
-
-* 1个值，四个角
-* 2个值，第一个值是左上有右下
-* 3个值，左上，右上和左下，右下
-* 4个值，顺时针，左上，右上，右下，左下
+* `border-radius`，根据值的个数，含义不同
+  * 1个值，四个角
+  * 2个值，第一个值是左上有右下
+  * 3个值，左上，右上和左下，右下
+  * 4个值，顺时针，左上，右上，右下，左下
+* `border-image`
 
 ### margin
 
@@ -90,9 +89,29 @@
 
 大部分情况下使用替补盒模型更方便。
 
-## TODO BFC
+## BFC
 
-## TODO IFC
+块级格式化上下文，创建一个独立布局的块。
+
+### 作用
+
+* 消除 `float` 子元素造成的高度塌陷
+* 避免该元素与其直接子元素发生的 `margin` 合并
+
+### 创建
+
+* `flex, grid`
+* 多列布局
+* `float`
+* `display: inline-block`
+* `position` 为 `absolute, fixed`
+* `overflow` 不为 `visible, clip`
+* `display: flow-root`
+* `contain`: `layout, content, paint`
+
+## IFC
+
+上面讲的行内盒子就是 `IFC`
 
 ## 溢出
 
@@ -109,5 +128,16 @@
 
 ## 其他
 
-`aspect-ratio` 宽高比
-`outline`
+* `aspect-ratio` 宽高比
+* `outline`，在 `border` 外部，不占据空间，
+  * `outline-width`
+  * `outline-style`
+  * `outline-color`
+  * `outline-offset` 距边框的距离
+* `box-shadow`
+  * 水平偏移
+  * 垂直偏移
+  * 模糊半径
+  * 传播半径
+  * inset 是否内部阴影
+  * 颜色

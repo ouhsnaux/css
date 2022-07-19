@@ -45,7 +45,7 @@
 
   与书写方向对应的四个方位词
 
-  | 属性 | 对应属性 | 属性 | 对应属性 |
+  | 逻辑属性 | 对应属性 | 逻辑属性 | 对应属性 |
   | :-- | :-- | :-- | :-- |
   | inline-start | left | block-start | top |
   | inline-end | right | block-end | bottom |

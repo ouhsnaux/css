@@ -1,4 +1,4 @@
-# 背景和边框
+# 背景
 
 * `background-color`: 颜色和透明度，取值见下一节
 * `background-image`：背景图
@@ -80,4 +80,4 @@
 
 ### 重复渐变
 
-`repeat-linear-gradient, repeat-radial-gradient` 不会自动添加终点，从结束节点自动重复渐变。最后一个节点位置默认 `100%`。如果起点与终点颜色相同，则终点到起点之间也是渐变色。否则终点到起点之间颜色会突变。
+`repeat-linear-gradient, repeat-radial-gradient, repeat-conic-gradient` 不会自动添加终点，从结束节点自动重复渐变。最后一个节点位置默认 `100%`。如果起点与终点颜色相同，则终点到起点之间也是渐变色。否则终点到起点之间颜色会突变。

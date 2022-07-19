@@ -9,6 +9,8 @@
   * `none` 图片尺寸不变，只展示图片的一部分或留白并居中。
   * `scale-down`: 如果图片比容器小，效果等于 `none`，否则等于 `contain`
 
+替换元素拥有内在尺寸和默认基线，需要修改 `vertical-align` 对齐。
+
 ## 表格
 
 * `table-layout` 表格布局
@@ -25,6 +27,7 @@
 ## 表单
 
 * `textarea, resize: auto`
+* `appearance: none` 保留语义，去除元素默认样式
 
 ## 列表
 
@@ -35,10 +38,13 @@
 * `list-style-image`
 * `list-style` 简写
 
-控制样式有限，无法满足需求则使用背景图
-
 ### 控制有序列表的序号
 
 * @counter-style
 * counter-increment
 * counter-reset
+
+### 其它控制列表样式的方法
+
+* 背景图
+* 伪元素 `::marker` 配合 `content`
