@@ -2,24 +2,53 @@
 
 ## transform
 
-* `transform-origin` 形变的基点
+### 函数
 
-### 平移
+#### 平移
 
 * `translate(x, y)`
 * `translateX, translateY, translateZ`
 * `translate3d(x, y, z)`
 
-### 旋转
+#### 旋转
 
-* `rotate`
+* `rotate` 等于 `rotateZ`
 * `rotateX, rotateY, rotateX`
+* `rotate3d(x, y, z)`
 
-### 倾斜
+#### 倾斜
 
-### 缩放
+* `skew(x, y)`
+* `skewX, skewY`
 
-### 3D
+#### 缩放
+
+* `scale(x, y)`
+* `scaleX, scaleY, scaleZ`
+* `scale3d(x, y, z)`
+
+#### 形变
+
+* `matrix` 自定义形变
+* `matrix3d()`
+
+### perspective
+
+* `perspective` 定义屏幕到z=0平面的距离，默认无限远的距离
+* `perspective-origin` 基点
+
+### 其它
+
+* `backface-visibility` 3d下背面的元素是否可见
+  * `visible`
+  * `hidden`
+* `transform-style`
+  * `flat` 平面，子元素一直在父元素上方
+  * `preserve-3d` 3d形式，z坐标小的面会被父元素遮挡
+* `transform-origin` 形变的基点
+* `transform-box` `transform-origin` 基点
+  * `content-box`
+  * `border-box`
 
 ## transition
 

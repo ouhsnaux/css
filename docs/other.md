@@ -60,3 +60,15 @@ element.style.getProperty("--my-var");
 * `drop-shadow` 阴影，包括盒子里的内容
 
 可以同时使用多个值。
+
+## 工具
+
+兼容性检测：[Can I use](https://caniuse.com/)
+
+## 预处理器
+
+当原生 `css` 变得越来越大，越来越复杂，变得难以维护。
+
+预处理器完全兼容原生 `css`，添加了许多新特性，代码更强壮易读可维护，编译后可生成 `css`。
+
+[Sass](https://github.com/ouhsnaux/sass)

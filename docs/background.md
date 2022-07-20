@@ -1,6 +1,8 @@
 # 背景
 
-* `background-color`: 颜色和透明度，取值见下一节
+## 属性
+
+* `background-color`: 背景色
 * `background-image`：背景图
   * 除了图片，也可以是渐变（见下方）。
   * 可以同时存在多张图，使用逗号分隔，此时 `repeat, size, position` 属性也需要写多个，如果数量不够会循环使用。
