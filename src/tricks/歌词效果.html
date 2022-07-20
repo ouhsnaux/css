@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .text {
+      font-size: 34px;
+      font-weight: bold;
+      color: transparent;
+      background-color: gray;
+      background-image: linear-gradient(90deg, green, red);
+      background-repeat: no-repeat;
+      -webkit-background-clip: text;
+      animation: bg 10s;
+    }
+    @keyframes bg {
+      from {
+        background-size: 0;
+      }
+      to {
+        background-size: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="text">
+    默认情况下，侧边栏会自动地显示由当前页面的标题（headers）组成的链接，并按照页面本身的结构进行嵌套，你可以通过 themeConfig.sidebarDepth 来修改它的行为。默认的深度是 1，它将提取到 h2 的标题，设置成 0 将会禁用标题（headers）链接，同时，最大的深度为 2，它将同时提取 h2 和 h3 标题。
+  </div>
+</body>
+</html>
