@@ -32,6 +32,9 @@
 ## 布局
 
 * `text-align` 水平对齐方式，`left, right, center, justify`
+* `vertical-align` 垂直对齐方式
+  * 关键字 `baseline, middle, top, bottom` 等。
+  * 尺寸
 * `text-align-last` 最后一行水平对齐方式
 * `line-height` 行高，除了尺寸，还可以使用无单位数字，最终的行高等于字体大小乘以该数字，`1.5~2`比较合适
 * `text-indent` 首行缩进

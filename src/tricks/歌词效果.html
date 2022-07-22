@@ -6,29 +6,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
+    :root {
+      --width: 1000px;
+    }
+    .container {
+      position: relative;
+      width: var(--width);
+    }
+    .mask {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      overflow: hidden;
+      animation: mask 10s;
+    }
     .text {
       font-size: 34px;
       font-weight: bold;
       color: transparent;
       background-color: gray;
+      -webkit-background-clip: text;
+    }
+    .text1 {
+      left: 0;
       background-image: linear-gradient(90deg, green, red);
       background-repeat: no-repeat;
-      -webkit-background-clip: text;
-      animation: bg 10s;
     }
-    @keyframes bg {
+    .text2 {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: var(--width);
+    }
+    @keyframes mask {
       from {
-        background-size: 0;
+        left: 0;
       }
       to {
-        background-size: 100%;
+        left: 100%;
       }
     }
   </style>
 </head>
 <body>
-  <div class="text">
+<div class="container">
+  <div class="text text1">
     默认情况下，侧边栏会自动地显示由当前页面的标题（headers）组成的链接，并按照页面本身的结构进行嵌套，你可以通过 themeConfig.sidebarDepth 来修改它的行为。默认的深度是 1，它将提取到 h2 的标题，设置成 0 将会禁用标题（headers）链接，同时，最大的深度为 2，它将同时提取 h2 和 h3 标题。
   </div>
+  <div class="mask">
+    <div class="text text2">
+      默认情况下，侧边栏会自动地显示由当前页面的标题（headers）组成的链接，并按照页面本身的结构进行嵌套，你可以通过 themeConfig.sidebarDepth 来修改它的行为。默认的深度是 1，它将提取到 h2 的标题，设置成 0 将会禁用标题（headers）链接，同时，最大的深度为 2，它将同时提取 h2 和 h3 标题。
+    </div>
+  </div>
+</div>
 </body>
 </html>

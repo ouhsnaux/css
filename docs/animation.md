@@ -39,8 +39,8 @@
 
 ### 其它
 
-* `backface-visibility` 3d下背面的元素是否可见
-  * `visible`
+* `backface-visibility` 3d下背面的元素是否可见，背景色需透明
+  * `visible` 默认
   * `hidden`
 * `transform-style`
   * `flat` 平面，子元素一直在父元素上方
