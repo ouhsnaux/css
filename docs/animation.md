@@ -4,6 +4,13 @@
 
 ### 函数
 
+书写顺序：
+
+1. perspective
+2. scale
+3. translate
+4. rotate
+
 #### 平移
 
 * `translate(x, y)`
@@ -15,6 +22,7 @@
 * `rotate` 等于 `rotateZ`
 * `rotateX, rotateY, rotateX`
 * `rotate3d(x, y, z)`
+* 坐标轴会跟着旋转
 
 #### 倾斜
 

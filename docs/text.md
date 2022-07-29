@@ -38,6 +38,8 @@
 * `text-align-last` 最后一行水平对齐方式
 * `line-height` 行高，除了尺寸，还可以使用无单位数字，最终的行高等于字体大小乘以该数字，`1.5~2`比较合适
 * `text-indent` 首行缩进
+* `letter-spacing` 字母或CJK文字间空间，默认为0
+* `word-spacing` 单词间空间，对CJK无效
 
 ### 方向
 
